@@ -1,0 +1,22 @@
+<!--miniprogram/login/reg/register.wxml-->
+<view class="container"> 
+ 
+ <view class="login-icon"> 
+ <image class="login-img" src="cloud://ckl-e1n4r.636b-ckl-e1n4r-1300831262/membership/1.jfif"></image> 
+ </view> 
+ <view class="login-from"> 
+ 
+ <!-- 邀请码 -->
+  <view class="inputView"> 
+  <image class="keyImage" src="../../img/key.png"></image> 
+  <label class="loginLab">邀请码</label> 
+  <input class="inputText" password="true" placeholder="请输入邀请码" bindinput="invite" /> 
+ </view> 
+ 
+ <!--按钮-->
+ <view class="loginBtnView"> 
+  <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">注册</button> 
+ </view> 
+ </view> 
+</view>
+

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/merchantoradmin/merchant/add/add.wxml-->
+<view wx:if="{{!success}}">
+
+    <view class='row'>
+            <view class='info'>
+                 <text class= 'info-input' bindtap="adimg">首页广告照片</text>
+            </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <text class= 'info-input' bindtap="gooodsimg">商品展示照片</text>
+          </view>
+  
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="goodsname" placeholder="商品名" />
+          </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="price" placeholder="价格" />
+          </view>
+    </view>
+    
+    <button class='submit' bindtap='submit'>提交</button>
+</view>
+ 
+<view class = 'success' wx:if="{{success}}">
+  <web-view src="{{url}}"></web-view>
+  
+</view>

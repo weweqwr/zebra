@@ -1,0 +1,60 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/car/car",
+    "pages/information/information",
+    "pages/mine/mine",
+    "pages/order/order",
+    "pages/address/defaultaddress/defaultaddress",
+    "pages/address/newaddress/newaddress",
+    "pages/merchantoradmin/choice/choice",
+    "pages/merchantoradmin/merchant/show/show",
+    "pages/merchantoradmin/admin/ad/adminAd",
+    "pages/merchantoradmin/admin/choice/choice",
+    "pages/merchantoradmin/admin/merequest/merequest",
+    "pages/merchantoradmin/merchant/register/register",
+    "pages/merchantoradmin/merchant/add/add",
+    "pages/merchantoradmin/merchant/update/update",
+    "pages/member/addCard/addCard",
+    "pages/login/reg/register",
+    "pages/commission/commission"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Zebra",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/navimages/home_default.png",
+        "selectedIconPath": "images/navimages/home_select.png"
+      },
+      {
+        "pagePath": "pages/commission/commission",
+        "text": "权益",
+        "iconPath": "images/navimages/quanyi_default.png",
+        "selectedIconPath": "images/navimages/quanyi_select.png"
+      },
+      {
+        "pagePath": "pages/car/car",
+        "text": "购物车",
+        "iconPath": "images/navimages/car_default.png",
+        "selectedIconPath": "images/navimages/car_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "images/navimages/myself_default.png",
+        "selectedIconPath": "images/navimages/myself_select.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

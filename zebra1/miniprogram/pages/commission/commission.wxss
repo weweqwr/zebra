@@ -1,0 +1,104 @@
+/* miniprogram/pages/commission/commission.wxss */
+.my{  
+
+    display: flex;  
+
+    flex-direction: column;  
+
+    align-items: center;  
+
+    background: #000000;   
+    
+    color: white;
+
+    width: 100%; 
+
+    height: 300rpx;
+
+}
+
+.invite{
+  text-align: center;
+ width: 100%; 
+ font-size: 12px;
+}
+.myorder-text {  
+
+    font-size: 34rpx;  
+
+    color: gray;  
+
+    margin: 20rpx;  
+
+    width: 100%;
+
+}
+.goodslist{  
+    background: #fff;  
+    display: flex;  
+    flex-direction: column;  
+}  
+.goods{  
+    display: flex;  
+    flex-direction: row;  
+    border-bottom: 1px solid #ddd;  
+}  
+.good-img{  
+    padding: 5px;  
+    width: 80px;  
+    height: 80px;  
+}  
+.good-cont{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    font-size: 14px;  
+}  
+.goods-navigator{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    justify-content: center;  
+}  
+.good-name{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    color: #555;  
+    justify-content: center;  
+}  
+.good-price{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    color:#e4393c;  
+    font-weight: 600;  
+}  
+.cart{  
+    width: 40px;  
+    height: 40px;  
+    padding-right: 10px;  
+}
+.prog{
+  width: 100%;
+}  
+.percentd{
+  width: 60%;
+  float: left;
+}
+.left{
+  width: 7%;
+  color: white;
+  font-size: 9px;
+  margin-left:13%;
+  float: left;
+}
+.right{
+  width: 20%;
+  color: white;
+  font-size: 8px;
+  float: left;
+}
+
+

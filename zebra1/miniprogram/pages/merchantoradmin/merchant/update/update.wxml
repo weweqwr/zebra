@@ -1,0 +1,54 @@
+<!--miniprogram/pages/merchantoradmin/merchant/update/update.wxml-->
+<view wx:if="{{!success}}">
+
+<view class='content'>
+  <view class='img-box'>
+    <view class='img-list'>
+      <block wx:if="{{adImg!=''}}">
+        <view class='img-item'>
+          <image src='{{adImg}}' bindlongpress="deleteImage" data-id='{{adImg}}'></image>
+        </view>
+      </block>
+      <view class='chooseimg' bindtap="adimg">
+        <view class="weui-uploader__input-box"></view>
+      </view>
+    </view>
+    <view class='tips'>广告图片</view>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='img-box'>
+    <view class='img-list'>
+      <block wx:for="{{goodsImg}}" wx:key="index">
+        <view class='img-item'>
+          <image src='{{item}}' bindlongpress="deleteImage" data-id='{{item}}'></image>
+        </view>
+      </block>
+      <view class='chooseimg' bindtap="gooodsimg">
+        <view class="weui-uploader__input-box"></view>
+      </view>
+    </view>
+    <view class='tips'>商品展示</view>
+  </view>
+</view>
+
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="goodsname" value="{{goodsname}}" />
+          </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="price" value="{{price}}" />
+          </view>
+    </view>
+    
+    <button class='submit' bindtap='submit'>提交</button>
+</view>
+ 
+<view class = 'success' wx:if="{{success}}">
+  <web-view src="{{url}}"></web-view>
+  
+</view>
+

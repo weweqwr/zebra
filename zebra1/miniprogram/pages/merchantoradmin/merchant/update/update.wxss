@@ -1,0 +1,161 @@
+/* miniprogram/pages/merchantoradmin/merchant/update/update.wxss */
+page{
+   background: #F0F0F0 ;
+}
+ 
+/*登录图片*/
+.login-icon{ 
+ flex: none; 
+ height: 80px;
+} 
+.login-img{ 
+ width: 200rpx; 
+}
+.row{
+  margin-top: 20rpx;
+  overflow: hidden;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #777;
+  background: #fff;
+ 
+}
+.info-input{
+  height: 100rpx;
+  margin-left: 50rpx;
+  color: #777;
+  float: left;
+}
+.info-input1{
+  height: 100rpx;
+  margin-left: 50rpx;
+  color: #777;
+  float: left;
+  width: 420rpx;
+}
+.button{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  background: #33FF99;
+  float: left;
+  margin-left: 10rpx;
+  margin-top: 15rpx;
+  color: #FFFFFF;
+}
+.submit{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background: rgb(44, 156, 10);
+  color: #FFFFFF;
+}
+.success{
+  background: #ffffff;
+ 
+}
+.cheer{
+  text-align: center;
+  line-height: 400rpx;
+  font-size: 60rpx;
+  position: relative;
+}
+.return{
+  margin: 20rpx;
+}
+
+.content {
+  width: 100%;
+  background-color: #fff;
+}
+
+.img-list {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img-item {
+  width: 30%;
+  text-align: left;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.img-item image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #fff;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 100rpx;
+}
+
+.chooseimg {
+  background-color: #fff;
+}
+
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #d9d9d9;
+}
+
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+
+.weui-uploader__input-box:after, .weui-uploader__input-box:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+
+.weui-uploader__input-box:after, .weui-uploader__input-box:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+
+.tips {
+  color: #666;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+
+.img-box {
+  width: 92%;
+  margin: auto;
+  padding-top: 20rpx;
+}

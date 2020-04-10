@@ -1,0 +1,34 @@
+<!--miniprogram/pages/commission/commission.wxml-->
+<view  wx:for="{{merchantinfo}}" class="my">
+  <text>积分：{{item.commission}}</text>
+    <view class="prog">
+      <text class="left">{{start}}</text>
+      <progress class="percentd" percent="{{percent}}" color="orange" />
+      <text class="right">{{end}}</text>
+    </view>
+  <text>我的邀请码:</text>
+  <text class="invite"  selectable='true'>{{item._id}}</text>
+  <text class="invite">等级：{{grade}}</text>
+</view>
+<view>
+   <text class="myorder-text">我的下家</text>
+    <view class="goodslist">  
+    <!--item-->  
+    <block wx:for="{{merchantinfo}}"  wx:for-item="merchant">
+      
+      <view class="goods" wx:for="{{merchant.subordinate}}" >  
+        <!--左侧图片盒子-->  
+        <view>  
+          <image src="{{item.avatarUrl}}"  class="good-img" />  
+        </view>  
+        <!--右侧说明部分-->  
+        <view class="good-cont">  
+          <!--上--文字说明-->  
+          <view class="goods-navigator">  
+            <text class="good-name">用户名：{{item.nickName}}</text>  
+          </view>  
+        </view>  
+      </view>  
+    </block>  
+  </view>  
+</view>

@@ -1,0 +1,13 @@
+<!--miniprogram/pages/member/addCard/addCard.wxml-->
+  <block wx:for="{{merbershipcard}}" wx:key="item">
+    <view class="binner">
+      <view class="flex-row">
+      <image src="{{item.img}}"></image>
+        <view class="text">
+          <text class="title">{{item.cardname}}</text>
+          <text class="sub-title">{{item.discount}}</text>
+        </view>
+        <view class="chongzhi" bindtap="pay" data-id="{{item._id}}">充值</view>
+      </view>
+    </view>
+  </block>

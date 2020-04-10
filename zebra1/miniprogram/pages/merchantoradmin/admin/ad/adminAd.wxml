@@ -1,0 +1,43 @@
+<!--miniprogram/pages/merchantoradmin/admin/adminAd.wxml-->
+<!--index.wxml-->
+<text>修改广告栏的预计效果</text>
+ <swiper indicator-dots="indicatorDots"
+        indicator-color="#FFF"
+        indicator-active-color = "#bc162c"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.Advertisement}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<text>修改广告栏</text>
+<view class="gap-1"></view>
+<!--商品的展示-->
+<view class="goodslist">  
+    <!--item-->  
+    <block wx:for="{{imgUrls2}}">  
+      <view class="goods"  data-id="{{item._id}}">  
+        <!--左侧图片盒子-->  
+        <view>  
+          <image src="{{item.GoodsImg[0]}}" class="good-img" />  
+        </view>  
+        <!--右侧说明部分-->  
+        <view class="good-cont">  
+          <!--上--文字说明-->  
+          <view class="goods-navigator">  
+            <text class="good-name">{{item.GoodsName}}</text>  
+          </view>  
+          <!--下--价格部分-->  
+          <view class="good-price">  
+            <text>￥{{item.Price}}</text>  
+            是否展示：<switch bindchange="showorno" data-id="{{item._id}}" checked="{{item.flag}}"/>
+          </view>  
+        </view>  
+      </view>  
+    </block>  
+  </view>  
+
+

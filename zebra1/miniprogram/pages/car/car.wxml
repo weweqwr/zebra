@@ -1,0 +1,52 @@
+<!--pages/Car/car.wxml-->
+<!--要是够车内没有数据，就行显示没有数据-->  
+<view class="cart" wx:if="{{cart==false}}">  
+    <image src="/images/navimages/car_default.png"/>  
+    <view>购物车什么都没有，赶快去购物吧</view>  
+</view>  
+<!--要是有数据，就显示数据-->  
+<view class="cartList" wx:if="{{cart!=false}}">  
+    <!--header-->  
+    <view class="baoyou"></view>  
+    <!--list item-->  
+    <checkbox-group bindchange="showCar1">  
+    <block wx:for="{{cart}}" wx:for-item="firstImg" >  
+        <view class="goods"  wx:for="{{firstImg.data}}" >
+            <!--左侧图片-->  
+            <view>  
+                <image src="{{item.GoodsImg[0]}}" class="good-img"/>  
+            </view>  
+            <!--右侧说明部分-->  
+            <view class="good-cont">  
+                <!--文字说明-->  
+                <view class="goods-navigator">  
+                    <text class="good-name">{{item.GoodsName}}</text>  
+                </view>  
+                <!--价钱和购物加减的父盒子-->  
+                <view class="good-price">  
+                    <text class="price">￥{{item.Price}}</text>  
+                    <view class="btn-box">  
+                        <view class="btn">  
+                            <button id="del{{index}}" data-id="{{item._id}}" type="default" size="mini" bindtap="delCount">-</button>  
+                            <input  type="text" bindinput="modiffer" data-id="{{item._id}}" value="{{firstImg.count}}"/>  
+                            <button id="add{{index}}" data-id="{{item._id}}" type="default" size="mini" bindtap="addCount">+</button>  
+                        </view>  
+                        <image id="img{{index}}" src="/images/btn/del.png" data-id="{{item._id}}" bindtap="delGoods"/> 
+                          <checkbox  value="{{item._id}}"   data-id="{{item._id}}" ></checkbox>
+                      
+                    </view>  
+                </view>  
+            </view>  
+        </view>
+          
+    </block>  
+    </checkbox-group>
+    <!--footer--> 
+    <view class="total">  
+        <view class="total_text">合计：<text>￥{{sum1}}</text></view>
+        <input type="number" class="jifen" bindinput="usecommission" value="{{value}}" placeholder="积分:{{commission}}"></input>
+        <button class="total_js" size="mini" bindtap="settleaccount">去结算({{goodsCount}})</button>
+    </view>
+    <!-- 使用积分 -->
+    <view class="introduct1"><text class="introduct">普通用户无优惠/普通会员9.5折/超级会员8.8折</text></view>
+</view>  

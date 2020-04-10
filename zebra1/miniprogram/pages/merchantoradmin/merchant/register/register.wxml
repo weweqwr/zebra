@@ -1,0 +1,36 @@
+<!--miniprogram/pages/merchantoradmin/merchant/register/register.wxml-->
+<view wx:if="{{!success}}">
+
+    <view class='row'>
+            <view class='info'>
+                  <input  class= 'info-input' bindinput="merchantCode" placeholder="请输入您的营业许可证号" />
+            </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input  class= 'info-input' bindinput="phone" placeholder="请输入联系电话" />
+          </view>
+  
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="name" placeholder="姓名" />
+          </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input   class= 'info-input' bindinput="numberid" placeholder="请重新身份证号码" />
+          </view>
+    </view>
+    <view class='row'>
+          <view class='info'>
+                <input  class= 'info-input' bindinput="merchantname" placeholder="店名" />
+          </view>
+    </view>
+    <button class='submit' bindtap='submit'>提交</button>
+</view>
+ 
+<view class = 'success' wx:if="{{success}}">
+  <web-view src="{{url}}"></web-view>
+  
+</view>

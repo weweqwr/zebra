@@ -1,0 +1,80 @@
+/* miniprogram/pages/merchantoradmin/merchant/show/show.wxss */
+.gap-1,.gap-2{
+    width:100%;
+    height:10rpx;
+    background:rgb(238, 238, 238);
+}
+
+.goodslist{  
+    background: #fff;  
+    display: flex;  
+    flex-direction: column;  
+}  
+.goods{  
+    display: flex;  
+    flex-direction: row;  
+    border-bottom: 1px solid #ddd;  
+}  
+.good-img{  
+    padding: 5px;  
+    width: 80px;  
+    height: 80px;  
+}  
+.good-cont{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    font-size: 14px;  
+}  
+.goods-navigator{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    justify-content: center;  
+}  
+.good-name{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: column;  
+    color: #555;  
+    justify-content: center;  
+}  
+.good-price{  
+    display: flex;  
+    flex: 1;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    color:#e4393c;  
+    font-weight: 600;  
+}  
+.cart{  
+    width: 40px;  
+    height: 40px;  
+    padding-right: 10px;  
+}  
+.btn1 {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
+.head{
+  height: 130px;
+  width: 130px;
+}

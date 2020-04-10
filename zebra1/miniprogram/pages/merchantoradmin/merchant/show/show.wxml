@@ -1,0 +1,35 @@
+<!--miniprogram/pages/merchantoradmin/merchant/show/show.wxml-->
+<view class="gap-1"></view>
+<!--商品的展示-->
+<view class="goodslist">  
+    <!--item-->  
+    <block wx:for="{{imgUrls}}">  
+      <view class="goods"  data-id="{{item._id}}">  
+        <!--左侧图片盒子-->  
+        <view>  
+          <image src="{{item.GoodsImg[0]}}" class="good-img" />  
+        </view>  
+        <!--右侧说明部分-->  
+        <view class="good-cont">  
+          <!--上--文字说明-->  
+          <view class="goods-navigator">  
+            <text class="good-name">{{item.GoodsName}}</text>  
+          </view>  
+          <!--下--价格部分-->  
+          <view class="good-price">  
+            <text>￥{{item.Price}}</text>  
+            <text bindtap="del" data-id="{{item._id}}"> 删除</text>
+            <text bindtap="update" data-id="{{item._id}}"> 修改</text>
+          </view>  
+        </view>  
+      </view> 
+    </block>
+     
+      <button class='btn1' bindtap="add" data-id="{{item._id}}">
+         <image class='btnImg' src='/images/logo/wechat1.png'></image>
+         <view>增加</view>
+      </button>   
+  </view>  
+
+
+

@@ -1,0 +1,59 @@
+<!--index.wxml-->
+ <swiper indicator-dots="indicatorDots"
+        indicator-color="#FFF"
+        indicator-active-color = "#bc162c"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+  <block wx:for="{{imgUrls1}}">
+    <swiper-item>
+      <image src="{{item.Advertisement}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--第二栏的接口-->
+<view class="menu-wrp">
+  <view class="menu-list" wx:for="{{menu.imgUrls}}">
+    <image class="menu-img" src="{{item}}" />
+    <view class="menu-desc">{{menu.descs[index]}}</view>
+  </view>
+</view>
+<view class="gap-1"></view>
+<!--搜索框-->
+   <view class='page_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="" bindinput="searchtext" placeholder="请输入关键字" />  
+        </view>  
+      </view>  
+      <view class='sousuo' bindtap="search">搜索</view>  
+    </view>  
+<!--商品的展示-->
+<view class="goodslist">  
+    <!--item-->  
+    <block wx:for="{{imgUrls2}}">  
+      <view class="goods" bindtap="goodsevent" data-id="{{item._id}}">  
+        <!--左侧图片盒子-->  
+        <view>  
+          <image src="{{item.GoodsImg[0]}}" class="good-img" />  
+        </view>  
+        <!--右侧说明部分-->  
+        <view class="good-cont">  
+          <!--上--文字说明-->  
+          <view class="goods-navigator">  
+            <text class="good-name">{{item.GoodsName}}</text>  
+          </view>  
+          <!--下--价格部分-->  
+          <view class="good-price">  
+            <text>￥{{item.Price}}</text>  
+            <image data-id="{{item._id}}" class="cart" src="/images/navimages/car_default.png" bindtap="addcart" /> 
+          </view>  
+        </view>  
+      </view>  
+    </block>  
+  </view>  
+
+
+
+

@@ -1,0 +1,21 @@
+<!--miniprogram/pages/address/defaultaddress/defaultaddress.wxml-->
+
+  <view wx:for="{{address}}">
+    <view class="product-name-wrap">
+      <view class="ui-list-item-info">姓名：{{item.realname}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>联系电话：{{item.phone}}
+      </view>
+      <view class="ui-list-item-address">
+       收获地址： {{item.address}}
+      </view>
+      <view class="ui-list-item-time">
+        <p>{{item.transportDay}}</p>
+        <p class="ui-list-item-del" data-id="{{item}}" bindtap="delAddress">删除</p>
+      </view>
+      <view class="separate"></view>
+    </view>
+  </view>
+
+<view class="add-address" bindtap="addAddress">
+  <image class="add-img"  src="/images/btn/plus.png"></image>新增地址
+</view>

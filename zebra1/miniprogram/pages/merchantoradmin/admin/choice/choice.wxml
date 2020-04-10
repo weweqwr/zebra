@@ -1,0 +1,11 @@
+<!--miniprogram/pages/merchantoradmin/choice/choice.wxml-->
+<view class="container">
+  <view class='left' bindtap="merchant">
+    <image src="/images/logo/merchant.png" class="img"></image>
+    <text class="text">广告管理</text>
+  </view>
+  <view class='right' bindtap="admin">
+    <image src="/images/logo/admin.png" class="img"></image>
+    <text class="text">店家管理</text>
+  </view>
+</view>
